@@ -8,6 +8,6 @@ variable "common_config" {
 variable "resource_group_config" {
   description = "'Common resource group' settings."
   default = {
-    name = "rg-common-dev-japaneast-001"
+    name = "rg-common-dev-je-001"
   }
 }
