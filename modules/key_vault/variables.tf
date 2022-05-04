@@ -5,11 +5,11 @@ variable "common_config" {
   }
 }
 
-variable "resource_group_name" {
-  default = null
-}
-
-variable "key_vault_name" {
-  description = "'Common key vault and access policy' settings."
-  default     = "kv-common-dev-je-001"
+variable "common_key_vault_config" {
+  description = "'Common resource group' settings."
+  default = {
+    name                = "kv-common-dev-je-001"
+    sku_name            = "standard"
+    access_policy       = []
+  }
 }

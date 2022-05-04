@@ -14,15 +14,24 @@ variable "common_resource_group_config" {
 }
 
 ##### Key Vault #####
-# variable "common_key_vault_config" {
-#   description = "'Common resource group' settings."
-#   default = {
-#     name                = "kv-common-dev-je-001"
-#     resource_group_name = null
-#   }
-# }
-
-variable "key_vault_name" {
-  description = "'Common key vault and access policy' settings."
-  default     = "kv-common-dev-je-001"
+variable "common_key_vault_config" {
+  description = "'Common key vault' settings."
+  default = {
+    name     = "kv-common-dev-je-001"
+    sku_name = "standard"
+    access_policy = [
+      {
+        object_id = "4171b2ba-d5c8-43ae-be10-4eb74afa226e"
+        key_permissions = [
+          "Get",
+        ]
+        secret_permissions = [
+          "Get",
+        ]
+        storage_permissions = [
+          "Get",
+        ]
+      }
+    ]
+  }
 }
