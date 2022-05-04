@@ -19,9 +19,10 @@ variable "common_key_vault_config" {
   default = {
     name     = "kv-common-dev-je-001"
     sku_name = "standard"
+    ### NOTE: object_idベタ書きをやめたい
     access_policy = [
       {
-        object_id = "4171b2ba-d5c8-43ae-be10-4eb74afa226e"
+        object_id = ""
         key_permissions = [
           "Get",
         ]

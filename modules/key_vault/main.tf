@@ -12,6 +12,7 @@ resource "azurerm_key_vault" "common_module_key_vault" {
   sku_name = var.common_key_vault_config.sku_name
 
   ### FIXME: dynamicブロックでブロックは使えなかった
+  ###        access_policy単独でresource作成する
   # dynamic "access_policy" {
   #   for_each = var.common_key_vault_config.access_policy
   #   content {
