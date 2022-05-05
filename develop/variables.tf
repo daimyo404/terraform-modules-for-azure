@@ -46,3 +46,11 @@ variable "common_app_service_plan_config" {
     sku_name = "B1"
   }
 }
+
+##### Linux Web App #####
+variable "common_linux_web_app_config" {
+  description = "'Common linux web app' settings."
+  default = {
+    name = "app-common-dev-je-001"
+  }
+}
